@@ -27,7 +27,30 @@ Latest government aur private job updates, form filling help
 aur career guidance yahan available hai.
 </p>
 </section>
+<section>
+  <h2>Latest Jobs</h2>
+  <div id="job-list"></div>
+</section>
 
+<script>
+fetch("jobs.json")
+  .then(res => res.json())
+  .then(jobs => {
+    const box = document.getElementById("job-list");
+    jobs.forEach(job => {
+      box.innerHTML += `
+        <div style="border:1px solid #ddd;padding:15px;margin-bottom:10px;border-radius:6px;">
+          <h3>${job.title}</h3>
+          <p><b>Qualification:</b> ${job.qualification}</p>
+          <p><b>Age Limit:</b> ${job.age}</p>
+          <p><b>Last Date:</b> ${job.lastDate}</p>
+          <p><b>Fees:</b> ${job.fees}</p>
+          <a href="${job.link}" style="background:#007bff;color:#fff;padding:8px 12px;border-radius:4px;text-decoration:none;">Apply Online</a>
+        </div>
+      `;
+    });
+  });
+</script>
 <section>
 <h2>Our Services</h2>
 <ul>
