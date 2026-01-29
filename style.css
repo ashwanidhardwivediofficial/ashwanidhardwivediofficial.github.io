@@ -174,3 +174,43 @@ padding: 10px;
   padding: 15px;
   font-size: 13px;
 }
+.apply-job {
+  background: #f4f6f8;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.apply-job h2 {
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+.apply-form {
+  max-width: 420px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.apply-form button {
+  width: 100%;
+  background: green;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
