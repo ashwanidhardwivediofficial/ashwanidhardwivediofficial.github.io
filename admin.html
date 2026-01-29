@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Career With Ashwani</title>
+  <style>
+    body { font-family: Arial; background:#f4f6f8; padding:20px; }
+    h2 { text-align:center; }
+    .box { max-width:500px; margin:auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px #ccc; }
+    input, select, textarea, button {
+      width:100%; padding:10px; margin:8px 0; border-radius:5px; border:1px solid #ccc;
+    }
+    button { background:#007bff; color:#fff; border:none; font-size:16px; }
+    button:hover { background:#0056b3; }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Post New Job</h2>
+
+  <input id="title" placeholder="Job Title">
+  <input id="qualification" placeholder="Qualification">
+  <input id="age" placeholder="Age Limit">
+  <input id="lastDate" placeholder="Last Date">
+  <input id="fees" placeholder="Fees">
+  <input id="link" placeholder="Apply Link">
+  
+  <select id="type">
+    <option value="government">Government Job</option>
+    <option value="private">Private Job</option>
+  </select>
+
+  <button onclick="generate()">Generate Job Code</button>
+
+  <textarea id="output" rows="8" placeholder="Generated job JSON here..."></textarea>
+</div>
+
+<script>
+function generate() {
+  const job = {
+    type: type.value,
+    title: title.value,
+    qualification: qualification.value,
+    age: age.value,
+    lastDate: lastDate.value,
+    fees: fees.value,
+    link: link.value
+  };
+
+  output.value = JSON.stringify(job, null, 2);
+}
+</script>
+
+</body>
+</html>
