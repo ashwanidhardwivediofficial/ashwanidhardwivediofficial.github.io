@@ -59,3 +59,28 @@ footer {
 text-align: center;
 padding: 10px;
 }
+.jobs {
+  padding: 20px;
+  background: #f4f6f8;
+}
+
+.job-box {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.job-box h3 {
+  color: #0a4aa6;
+}
+
+.job-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.job-box li {
+  margin-bottom: 10px;
+}
